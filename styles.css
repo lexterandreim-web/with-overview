@@ -21,8 +21,8 @@ body {
     --border: #ebebeb;
     --divider: #ededed;
     --accent: #1d8cf8;
-    --accent-soft: #f1f7ff;
     --track: #edf1f5;
+    --track-grey: #d9d9d9;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
@@ -253,12 +253,14 @@ body {
     display: block;
 }
 
+.card,
 .overview-card {
-    margin: 10px 10px 0;
-    padding: 16px 14px 18px;
+    margin: 12px 12px 0;
+    padding: 18px 16px;
     background: var(--card);
     border-radius: 16px;
-    border: 1px solid #ededed;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .overview-header {
@@ -340,15 +342,6 @@ body {
     height: 280px;
 }
 
-.card {
-    margin: 12px 12px 0;
-    padding: 18px 16px;
-    background: var(--card);
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-}
-
 .section-title,
 .card-title {
     font-size: 17px;
@@ -418,7 +411,9 @@ body {
 }
 
 .row,
-.legend-row {
+.legend-row,
+.age-row,
+.location-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -438,14 +433,18 @@ body {
     height: 8px;
     margin-top: 8px;
     background: var(--track);
-    border-radius: 999px;
+    border-radius: 3px;
     overflow: hidden;
+}
+
+.progress-grey {
+    background: var(--track-grey);
 }
 
 .progress-bar {
     height: 100%;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #1677ff 0%, #4597ff 100%);
+    border-radius: 3px;
+    background: #167ad8;
 }
 
 .progress-split {
@@ -453,20 +452,12 @@ body {
     gap: 3px;
     background: var(--track);
     padding: 0;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .progress-segment {
     height: 100%;
-}
-
-.progress-segment:first-child {
-    border-top-left-radius: 999px;
-    border-bottom-left-radius: 999px;
-}
-
-.progress-segment:last-child {
-    border-top-right-radius: 999px;
-    border-bottom-right-radius: 999px;
 }
 
 .split-primary {
@@ -477,24 +468,71 @@ body {
     background: #84b6e6;
 }
 
-.chart-wrap {
+.gender-chart-wrap {
     position: relative;
     width: 100%;
-    max-width: 250px;
-    height: 250px;
-    margin: 8px auto 8px;
+    max-width: 330px;
+    height: 180px;
+    margin: 4px auto 12px;
 }
 
+.gender-list {
+    margin-top: 6px;
+}
+
+.gender-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    font-size: 16px;
+}
+
+.gender-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gender-right {
+    color: #111;
+    font-weight: 500;
+}
+
+.divider-line {
+    height: 1px;
+    background: #ededed;
+}
+
+.chevron {
+    font-size: 20px;
+    vertical-align: -1px;
+}
+
+.age-block,
+.location-block {
+    margin-top: 18px;
+}
+
+.age-row,
+.location-row {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.age-bar,
+.location-bar {
+    background: #167ad8;
+}
+
+.chart-wrap,
 #genderChart,
 #overviewChart {
     width: 100% !important;
     height: 100% !important;
-}
-
-.legend-left {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .dot {
@@ -504,22 +542,16 @@ body {
     flex-shrink: 0;
 }
 
-.dot1 {
-    background: #75aee0;
+.dot-male {
+    background: #147ad6;
 }
 
-.dot2 {
-    background: #cfe5fb;
+.dot-female {
+    background: #79adde;
 }
 
-.dot3 {
-    background: #e7f1fb;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid #eef2f6;
-    margin: 12px 0 0;
+.dot-other {
+    background: #c2d9ee;
 }
 
 .spacer-sm {
