@@ -23,9 +23,7 @@ body {
     --accent: #1d8cf8;
     --accent-soft: #f1f7ff;
     --track: #edf1f5;
-    --danger: #ff2f63;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
-    --radius-card: 18px;
 }
 
 body {
@@ -56,7 +54,7 @@ body {
     grid-template-columns: 40px 1fr auto;
     align-items: center;
     gap: 10px;
-    padding: 14px 16px 10px;
+    padding: 14px 16px 8px;
     background: rgba(245, 245, 245, 0.96);
     backdrop-filter: blur(10px);
 }
@@ -74,14 +72,21 @@ body {
     padding: 0;
 }
 
+.topbar-title-wrap {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+
 .topbar-title {
-    text-align: center;
+    max-width: 130px;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: -0.03em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
 }
 
 .studio-btn {
@@ -104,7 +109,7 @@ body {
 }
 
 .video-preview-section {
-    padding: 14px 16px 10px;
+    padding: 8px 16px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,8 +118,8 @@ body {
 
 .video-thumb {
     width: 92px;
-    height: 116px;
-    border-radius: 14px;
+    height: 144px;
+    border-radius: 16px;
     overflow: hidden;
     position: relative;
     background: #111;
@@ -136,7 +141,7 @@ body {
 .video-duration {
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 12px;
     transform: translateX(-50%);
     color: #fff;
     font-size: 10px;
@@ -155,8 +160,6 @@ body {
     grid-template-columns: repeat(5, 1fr);
     margin: 0 0 8px;
     background: transparent;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
 }
 
 .stat-item {
@@ -203,7 +206,7 @@ body {
 
 .tabs {
     position: sticky;
-    top: 60px;
+    top: 58px;
     z-index: 50;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -215,7 +218,7 @@ body {
 .tab {
     position: relative;
     text-align: center;
-    padding: 14px 4px 14px;
+    padding: 14px 2px 14px;
     font-size: 13px;
     font-weight: 500;
     color: #8c8c8c;
@@ -234,8 +237,8 @@ body {
 .tab.active::after {
     content: "";
     position: absolute;
-    left: 18%;
-    right: 18%;
+    left: 12%;
+    right: 12%;
     bottom: 0;
     height: 3px;
     border-radius: 999px;
@@ -256,7 +259,6 @@ body {
     background: var(--card);
     border-radius: 16px;
     border: 1px solid #ededed;
-    box-shadow: none;
 }
 
 .overview-header {
@@ -448,7 +450,7 @@ body {
 
 .progress-split {
     display: flex;
-    gap: 2px;
+    gap: 3px;
     background: var(--track);
     padding: 0;
 }
@@ -468,19 +470,19 @@ body {
 }
 
 .split-primary {
-    background: linear-gradient(90deg, #1677ff 0%, #4597ff 100%);
+    background: #1681e8;
 }
 
 .split-secondary {
-    background: #9ec5ff;
+    background: #84b6e6;
 }
 
 .chart-wrap {
     position: relative;
     width: 100%;
-    max-width: 230px;
-    height: 132px;
-    margin: 2px auto 10px;
+    max-width: 250px;
+    height: 250px;
+    margin: 8px auto 8px;
 }
 
 #genderChart,
@@ -503,15 +505,15 @@ body {
 }
 
 .dot1 {
-    background: #1677ff;
+    background: #75aee0;
 }
 
 .dot2 {
-    background: #7eb6ff;
+    background: #cfe5fb;
 }
 
 .dot3 {
-    background: #dbe6f3;
+    background: #e7f1fb;
 }
 
 hr {
@@ -521,7 +523,7 @@ hr {
 }
 
 .spacer-sm {
-    height: 6px;
+    height: 18px;
 }
 
 @media (min-width: 431px) {
