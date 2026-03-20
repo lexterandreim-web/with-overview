@@ -213,25 +213,140 @@
 
                     <section class="card">
                         <div class="card-title">Gender</div>
-                        <div class="chart-wrap">
+
+                        <div class="gender-chart-wrap">
                             <canvas id="genderChart"></canvas>
                         </div>
 
-                        <div class="legend-row">
-                            <span class="legend-left"><span class="dot dot1"></span>Male</span>
-                            <span>81%</span>
-                        </div>
-                        <hr />
+                        <div class="gender-list">
+                            <div class="gender-row">
+                                <div class="gender-left">
+                                    <span class="dot dot-male"></span>
+                                    <span>Male</span>
+                                </div>
+                                <div class="gender-right">10%</div>
+                            </div>
 
-                        <div class="legend-row">
-                            <span class="legend-left"><span class="dot dot2"></span>Female</span>
-                            <span>19%</span>
-                        </div>
-                        <hr />
+                            <div class="divider-line"></div>
 
-                        <div class="legend-row">
-                            <span class="legend-left"><span class="dot dot3"></span>Other</span>
-                            <span>0%</span>
+                            <div class="gender-row">
+                                <div class="gender-left">
+                                    <span class="dot dot-female"></span>
+                                    <span>Female</span>
+                                </div>
+                                <div class="gender-right">73%</div>
+                            </div>
+
+                            <div class="divider-line"></div>
+
+                            <div class="gender-row">
+                                <div class="gender-left">
+                                    <span class="dot dot-other"></span>
+                                    <span>Other</span>
+                                </div>
+                                <div class="gender-right">17% <span class="chevron">›</span></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <div class="card-title">Age</div>
+
+                        <div class="age-block">
+                            <div class="age-row">
+                                <span>18 - 24</span>
+                                <span>89%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar age-bar" style="width: 89%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="age-block">
+                            <div class="age-row">
+                                <span>25 - 34</span>
+                                <span>11%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar age-bar" style="width: 11%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="age-block">
+                            <div class="age-row">
+                                <span>35 - 44</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar age-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="age-block">
+                            <div class="age-row">
+                                <span>45 - 54</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar age-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="age-block">
+                            <div class="age-row">
+                                <span>55+</span>
+                                <span>0%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar age-bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <div class="section-title">
+                            Locations
+                            <span class="info-icon">i</span>
+                        </div>
+
+                        <div class="location-block">
+                            <div class="location-row">
+                                <span>Philippines</span>
+                                <span>99.7%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar location-bar" style="width: 99.7%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="location-block">
+                            <div class="location-row">
+                                <span>Japan</span>
+                                <span>0.1%</span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar location-bar" style="width: 0.1%; min-width: 1px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="location-block">
+                            <div class="location-row">
+                                <span>United States</span>
+                                <span>0.1% <span class="chevron">›</span></span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar location-bar" style="width: 0.1%; min-width: 1px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="location-block">
+                            <div class="location-row">
+                                <span>Other</span>
+                                <span>0.1% <span class="chevron">›</span></span>
+                            </div>
+                            <div class="progress progress-grey">
+                                <div class="progress-bar location-bar" style="width: 0.1%; min-width: 1px;"></div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -280,21 +395,19 @@
                 data: {
                     labels: ["Male", "Female", "Other"],
                     datasets: [{
-                        data: [81, 19, 0.0001],
-                        backgroundColor: ["#75aee0", "#cfe5fb", "#e7f1fb"],
-                        borderColor: "#ffffff",
+                        data: [10, 73, 17],
+                        backgroundColor: ["#147ad6", "#79adde", "#c2d9ee"],
+                        borderColor: "#f7f7f7",
                         borderWidth: 3,
-                        borderRadius: 2,
-                        spacing: 2,
-                        cutout: "68%",
                         hoverOffset: 0
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    rotation: -90,
-                    circumference: 360,
+                    rotation: 270,
+                    circumference: 180,
+                    cutout: "68%",
                     animation: false,
                     plugins: {
                         legend: { display: false },
