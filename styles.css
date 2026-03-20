@@ -62,10 +62,9 @@ body {
     grid-template-columns: 44px 1fr auto;
     align-items: center;
     gap: 10px;
-    padding: 14px 16px 12px;
+    padding: 12px 16px 8px;
     background: rgba(245, 246, 248, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(231, 235, 240, 0.85);
 }
 
 .icon-btn {
@@ -81,11 +80,21 @@ body {
     cursor: pointer;
 }
 
+.topbar-title-wrap {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+}
+
 .topbar-title {
+    max-width: 118px;
     font-size: 17px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .studio-btn {
@@ -108,7 +117,7 @@ body {
 }
 
 .video-preview-section {
-    padding: 18px 16px 14px;
+    padding: 8px 16px 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,7 +216,7 @@ body {
 
 .tabs {
     position: sticky;
-    top: 63px;
+    top: 56px;
     z-index: 40;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -451,16 +460,21 @@ hr {
 
     .topbar {
         grid-template-columns: 40px 1fr auto;
-        padding: 12px 12px 10px;
+        padding: 10px 12px 6px;
     }
 
     .topbar-title {
+        max-width: 108px;
         font-size: 16px;
     }
 
     .studio-btn {
         padding: 7px 10px;
         font-size: 10px;
+    }
+
+    .video-preview-section {
+        padding-top: 6px;
     }
 
     .stats-row {
@@ -475,5 +489,9 @@ hr {
 
     .tab {
         font-size: 13px;
+    }
+
+    .tabs {
+        top: 52px;
     }
 }
