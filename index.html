@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TikTok Video Analytics</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -13,16 +13,14 @@
     <div class="app-shell">
         <div class="phone-frame">
             <header class="topbar">
-                <button class="icon-btn" aria-label="Back" type="button">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+                <button class="icon-btn" aria-label="Back">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.3"
                         stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6" />
                     </svg>
                 </button>
 
-                <div class="topbar-title-wrap">
-                    <div class="topbar-title">Video an...</div>
-                </div>
+                <div class="topbar-title">Video analytics</div>
 
                 <button class="studio-btn" type="button">
                     <svg viewBox="0 0 20 20" width="15" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -41,11 +39,12 @@
                             src="./preview.jpg"
                             alt="Video thumbnail"
                             class="video-image"
+                            onerror="this.onerror=null; this.src='https://picsum.photos/300/450';"
                         />
                         <div class="video-shade"></div>
-                        <span class="video-duration">48.33s</span>
+                        <span class="video-duration">12.77s</span>
                     </div>
-                    <span class="post-date">Posted on Mar 10, 2026, 1:20 PM</span>
+                    <span class="post-date">Posted on Mar 14, 2026, 10:37 AM</span>
                 </section>
 
                 <section class="stats-row">
@@ -56,7 +55,7 @@
                                     d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128" />
                             </svg>
                         </div>
-                        <span class="stat-val">4,057</span>
+                        <span class="stat-val">5,499</span>
                     </div>
 
                     <div class="stat-item">
@@ -66,7 +65,7 @@
                                     d="M240 98a57.63 57.63 0 0 1-17 41l-89.3 90.62a8 8 0 0 1-11.4 0L33 139a58 58 0 0 1 82-82.1l13 12.15l13.09-12.19A58 58 0 0 1 240 98" />
                             </svg>
                         </div>
-                        <span class="stat-val">10</span>
+                        <span class="stat-val">6</span>
                     </div>
 
                     <div class="stat-item">
@@ -86,7 +85,7 @@
                                     d="m237.66 117.66l-80 80A8 8 0 0 1 144 192v-39.77c-57.1 3.24-96.25 40.27-107.24 52a12 12 0 0 1-20.68-9.58c3.71-32.26 21.38-63.29 49.76-87.37c23.57-20 52.22-32.69 78.16-34.91V32a8 8 0 0 1 13.66-5.66l80 80a8 8 0 0 1 0 11.32" />
                             </svg>
                         </div>
-                        <span class="stat-val">1</span>
+                        <span class="stat-val is-muted">0</span>
                     </div>
 
                     <div class="stat-item">
@@ -101,406 +100,175 @@
                 </section>
 
                 <nav class="tabs">
-                    <button class="tab" data-tab="inspiration" type="button">Inspiration</button>
-                    <button class="tab" data-tab="overview" type="button">Overview</button>
-                    <button class="tab active" data-tab="viewers" type="button">Viewers</button>
-                    <button class="tab" data-tab="engagement" type="button">Engagement</button>
+                    <div class="tab">Inspiration <span class="tab-dot"></span></div>
+                    <div class="tab">Overview</div>
+                    <div class="tab active">Viewers</div>
+                    <div class="tab">Engagement</div>
                 </nav>
 
-                <div class="tab-panel" id="inspiration">
-                    <section class="card">
-                        <div class="card-title">Inspiration</div>
-                        <p class="processing-text">Add trends, ideas, or notes here.</p>
-                    </section>
-                </div>
+                <section class="card">
+                    <div class="section-title">
+                        Total viewers
+                        <span class="info-icon">i</span>
+                    </div>
 
-                <div class="tab-panel" id="overview">
-                    <section class="overview-card">
-                        <div class="overview-header">
-                            <div class="overview-title-row">
-                                <h2 class="overview-title">Key metrics</h2>
-                                <span class="info-icon">i</span>
-                            </div>
-                            <p class="overview-subtitle">Updated on 3/19/2026.</p>
+                    <div class="total-viewers-number">57</div>
+
+                    <div class="total-viewers-change">
+                        <div class="change-circle">↑</div>
+                        <div class="change-text">
+                            +2 <span class="change-time">(vs 1d ago)</span>
                         </div>
+                    </div>
+                </section>
 
-                        <div class="metrics-grid">
-                            <div class="metric-box metric-box-active">
-                                <div class="metric-label">Video views</div>
-                                <div class="metric-value">4057</div>
-                            </div>
+                <section class="card">
+                    <div class="card-title">Viewer types</div>
 
-                            <div class="metric-box">
-                                <div class="metric-label">Total play time</div>
-                                <div class="metric-value">0h:39m:34s</div>
-                            </div>
+                    <div class="row">
+                        <span>89%</span>
+                        <span>11%</span>
+                    </div>
+                    <div class="progress progress-split">
+                        <div class="progress-segment split-primary" style="width: 89%;"></div>
+                        <div class="progress-segment split-secondary" style="width: 11%;"></div>
+                    </div>
+                    <div class="row label-row">
+                        <span>New viewers</span>
+                        <span>Returning viewers</span>
+                    </div>
 
-                            <div class="metric-box">
-                                <div class="metric-label">Average watch time</div>
-                                <div class="metric-value">0.5s</div>
-                            </div>
+                    <div class="spacer-sm"></div>
 
-                            <div class="metric-box">
-                                <div class="metric-label">Watched full video</div>
-                                <div class="metric-value">0.04%</div>
-                            </div>
+                    <div class="row">
+                        <span>87%</span>
+                        <span>13%</span>
+                    </div>
+                    <div class="progress progress-split">
+                        <div class="progress-segment split-primary" style="width: 87%;"></div>
+                        <div class="progress-segment split-secondary" style="width: 13%;"></div>
+                    </div>
+                    <div class="row label-row">
+                        <span>Non-followers</span>
+                        <span>Followers</span>
+                    </div>
+                </section>
 
-                            <div class="metric-box metric-box-small">
-                                <div class="metric-label">New followers</div>
-                                <div class="metric-value">0</div>
-                            </div>
-                        </div>
+                <section class="card">
+                    <div class="card-title">Gender</div>
+                    <div class="chart-wrap">
+                        <canvas id="genderChart"></canvas>
+                    </div>
 
-                        <div class="chart-card">
-                            <div class="chart-wrap-overview">
-                                <canvas id="overviewChart"></canvas>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                    <div class="legend-row">
+                        <span class="legend-left"><span class="dot dot1"></span>Male</span>
+                        <span>81%</span>
+                    </div>
+                    <hr />
 
-                <div class="tab-panel active" id="viewers">
-                    <section class="card">
-                        <div class="section-title">
-                            Total viewers
-                            <span class="info-icon">i</span>
-                        </div>
+                    <div class="legend-row">
+                        <span class="legend-left"><span class="dot dot2"></span>Female</span>
+                        <span>19%</span>
+                    </div>
+                    <hr />
 
-                        <div class="total-viewers-number">54</div>
+                    <div class="legend-row">
+                        <span class="legend-left"><span class="dot dot3"></span>Other</span>
+                        <span>0%</span>
+                    </div>
+                </section>
 
-                        <div class="total-viewers-change">
-                            <div class="change-circle">↑</div>
-                            <div class="change-text">
-                                +3 <span class="change-time">(vs 1d ago)</span>
-                            </div>
-                        </div>
-                    </section>
+                <section class="card">
+                    <div class="card-title">Age</div>
 
-                    <section class="card">
-                        <div class="section-title">
-                            Viewer types
-                            <span class="info-icon">i</span>
-                        </div>
+                    <div class="row"><span>18 - 24</span><span>57%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 57%;"></div></div>
 
-                        <div class="row">
-                            <span>75%</span>
-                            <span>25%</span>
-                        </div>
-                        <div class="progress progress-split">
-                            <div class="progress-segment split-primary" style="width: 75%;"></div>
-                            <div class="progress-segment split-secondary" style="width: 25%;"></div>
-                        </div>
-                        <div class="row label-row">
-                            <span>New viewers</span>
-                            <span>Returning viewers</span>
-                        </div>
+                    <div class="row"><span>25 - 34</span><span>37%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 37%;"></div></div>
 
-                        <div class="spacer-sm"></div>
+                    <div class="row"><span>35 - 44</span><span>3%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 3%;"></div></div>
 
-                        <div class="row">
-                            <span>100%</span>
-                            <span>0%</span>
-                        </div>
-                        <div class="progress progress-split">
-                            <div class="progress-segment split-primary" style="width: 100%;"></div>
-                            <div class="progress-segment split-secondary" style="width: 0%;"></div>
-                        </div>
-                        <div class="row label-row">
-                            <span>Non-followers</span>
-                            <span>Followers</span>
-                        </div>
-                    </section>
+                    <div class="row"><span>45 - 54</span><span>2%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 2%;"></div></div>
 
-                    <section class="card">
-                        <div class="card-title">Gender</div>
+                    <div class="row"><span>55+</span><span>1%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 1%;"></div></div>
+                </section>
 
-                        <div class="gender-chart-wrap">
-                            <canvas id="genderChart"></canvas>
-                        </div>
+                <section class="card">
+                    <div class="card-title">Locations</div>
 
-                        <div class="gender-list">
-                            <div class="gender-row">
-                                <div class="gender-left">
-                                    <span class="dot dot-male"></span>
-                                    <span>Male</span>
-                                </div>
-                                <div class="gender-right">10%</div>
-                            </div>
+                    <div class="row"><span>United States</span><span>96.3%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 96.3%;"></div></div>
 
-                            <div class="divider-line"></div>
+                    <div class="row"><span>Mexico</span><span>0.4%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.4%;"></div></div>
 
-                            <div class="gender-row">
-                                <div class="gender-left">
-                                    <span class="dot dot-female"></span>
-                                    <span>Female</span>
-                                </div>
-                                <div class="gender-right">73%</div>
-                            </div>
+                    <div class="row"><span>Malaysia</span><span>0.3%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.3%;"></div></div>
 
-                            <div class="divider-line"></div>
+                    <div class="row"><span>Ethiopia</span><span>0.2%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.2%;"></div></div>
 
-                            <div class="gender-row">
-                                <div class="gender-left">
-                                    <span class="dot dot-other"></span>
-                                    <span>Other</span>
-                                </div>
-                                <div class="gender-right">17% <span class="chevron">›</span></div>
-                            </div>
-                        </div>
-                    </section>
+                    <div class="row"><span>Morocco</span><span>0.2%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.2%;"></div></div>
 
-                    <section class="card">
-                        <div class="card-title">Age</div>
+                    <div class="row"><span>New Zealand</span><span>0.2%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.2%;"></div></div>
 
-                        <div class="age-block">
-                            <div class="age-row">
-                                <span>18 - 24</span>
-                                <span>89%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar age-bar" style="width: 89%;"></div>
-                            </div>
-                        </div>
+                    <div class="row"><span>United Arab Emirates</span><span>0.1%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.1%;"></div></div>
 
-                        <div class="age-block">
-                            <div class="age-row">
-                                <span>25 - 34</span>
-                                <span>11%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar age-bar" style="width: 11%;"></div>
-                            </div>
-                        </div>
+                    <div class="row"><span>United Kingdom</span><span>0.1%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.1%;"></div></div>
 
-                        <div class="age-block">
-                            <div class="age-row">
-                                <span>35 - 44</span>
-                                <span>0%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar age-bar" style="width: 0%;"></div>
-                            </div>
-                        </div>
+                    <div class="row"><span>Indonesia</span><span>0.1%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.1%;"></div></div>
 
-                        <div class="age-block">
-                            <div class="age-row">
-                                <span>45 - 54</span>
-                                <span>0%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar age-bar" style="width: 0%;"></div>
-                            </div>
-                        </div>
+                    <div class="row"><span>Nepal</span><span>0.1%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 0.1%;"></div></div>
 
-                        <div class="age-block">
-                            <div class="age-row">
-                                <span>55+</span>
-                                <span>0%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar age-bar" style="width: 0%;"></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="card">
-                        <div class="section-title">
-                            Locations
-                            <span class="info-icon">i</span>
-                        </div>
-
-                        <div class="location-block">
-                            <div class="location-row">
-                                <span>Philippines</span>
-                                <span>99.7%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar location-bar" style="width: 99.7%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="location-block">
-                            <div class="location-row">
-                                <span>Japan</span>
-                                <span>0.1%</span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar location-bar" style="width: 0.1%; min-width: 1px;"></div>
-                            </div>
-                        </div>
-
-                        <div class="location-block">
-                            <div class="location-row">
-                                <span>United States</span>
-                                <span>0.1% <span class="chevron">›</span></span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar location-bar" style="width: 0.1%; min-width: 1px;"></div>
-                            </div>
-                        </div>
-
-                        <div class="location-block">
-                            <div class="location-row">
-                                <span>Other</span>
-                                <span>0.1% <span class="chevron">›</span></span>
-                            </div>
-                            <div class="progress progress-grey">
-                                <div class="progress-bar location-bar" style="width: 0.1%; min-width: 1px;"></div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="tab-panel" id="engagement">
-                    <section class="card">
-                        <div class="card-title">Engagement</div>
-
-                        <div class="row"><span>Likes</span><span>10</span></div>
-                        <div class="progress"><div class="progress-bar" style="width: 14%;"></div></div>
-
-                        <div class="row"><span>Comments</span><span>0</span></div>
-                        <div class="progress"><div class="progress-bar" style="width: 0%;"></div></div>
-
-                        <div class="row"><span>Shares</span><span>1</span></div>
-                        <div class="progress"><div class="progress-bar" style="width: 4%;"></div></div>
-
-                        <div class="row"><span>Saves</span><span>0</span></div>
-                        <div class="progress"><div class="progress-bar" style="width: 0%;"></div></div>
-                    </section>
-                </div>
+                    <div class="row"><span>Other</span><span>2.0%</span></div>
+                    <div class="progress"><div class="progress-bar" style="width: 2%;"></div></div>
+                </section>
             </main>
         </div>
     </div>
 
     <script>
-        const tabs = document.querySelectorAll(".tab");
-        const panels = document.querySelectorAll(".tab-panel");
-
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                const target = tab.dataset.tab;
-
-                tabs.forEach(t => t.classList.remove("active"));
-                panels.forEach(panel => panel.classList.remove("active"));
-
-                tab.classList.add("active");
-                document.getElementById(target).classList.add("active");
-            });
-        });
-
-        const genderCanvas = document.getElementById("genderChart");
-        if (genderCanvas) {
-            new Chart(genderCanvas, {
-                type: "doughnut",
-                data: {
-                    labels: ["Male", "Female", "Other"],
-                    datasets: [{
-                        data: [10, 73, 17],
-                        backgroundColor: ["#147ad6", "#79adde", "#c2d9ee"],
-                        borderColor: "#f7f7f7",
-                        borderWidth: 3,
-                        hoverOffset: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    rotation: 270,
-                    circumference: 180,
+        new Chart(document.getElementById("genderChart"), {
+            type: "doughnut",
+            data: {
+                labels: ["Male", "Female", "Other"],
+                datasets: [{
+                    data: [81, 19, 0.0001],
+                    backgroundColor: ["#1677ff", "#7eb6ff", "#dbe6f3"],
+                    borderColor: "#ffffff",
+                    borderWidth: 3,
+                    borderRadius: 2,
+                    spacing: 2,
                     cutout: "68%",
-                    animation: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { enabled: false }
+                    hoverOffset: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                rotation: -90,
+                circumference: 180,
+                animation: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false
                     }
                 }
-            });
-        }
-
-        const overviewCanvas = document.getElementById("overviewChart");
-        if (overviewCanvas) {
-            new Chart(overviewCanvas, {
-                type: "line",
-                data: {
-                    labels: ["Mar 10", "", "", "", "", "Mar 16"],
-                    datasets: [{
-                        data: [4057, 0, 0, 0, 0, 0],
-                        borderColor: "#1d8cf8",
-                        backgroundColor: "rgba(29, 140, 248, 0.10)",
-                        fill: true,
-                        borderWidth: 2,
-                        pointRadius: 4,
-                        pointHoverRadius: 4,
-                        pointBackgroundColor: "#ffffff",
-                        pointBorderColor: "#1d8cf8",
-                        pointBorderWidth: 2,
-                        tension: 0
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    animation: false,
-                    layout: {
-                        padding: {
-                            left: 0,
-                            right: 8,
-                            top: 8,
-                            bottom: 0
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { enabled: false }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false,
-                                drawBorder: false
-                            },
-                            border: {
-                                display: false
-                            },
-                            ticks: {
-                                color: "#8d959f",
-                                font: {
-                                    size: 12,
-                                    family: "Inter"
-                                },
-                                maxRotation: 0,
-                                autoSkip: false
-                            }
-                        },
-                        y: {
-                            position: "right",
-                            min: 0,
-                            max: 5640,
-                            ticks: {
-                                stepSize: 1880,
-                                color: "#8d959f",
-                                font: {
-                                    size: 12,
-                                    family: "Inter"
-                                },
-                                callback: function(value) {
-                                    if (value === 0) return "";
-                                    return value.toLocaleString();
-                                }
-                            },
-                            grid: {
-                                color: "#d9d9d9",
-                                borderDash: [3, 4],
-                                drawBorder: false
-                            },
-                            border: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
-        }
+            }
+        });
     </script>
 </body>
 
